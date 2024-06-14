@@ -9,7 +9,7 @@ import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
 	return (
-		<main className="fixed h-full w-full grid grid-cols-5 bg-zinc-50">
+		<main className="fixed h-full w-full grid grid-cols-4 gap-0 bg-zinc-50">
 			<nav className="grid-cols-2 bg-zinc-100 flex flex-col gap-4  pt-10">
 				<div className="pt-2 pb-8 border-b border-zinc-300 px-6">
 					<button className="p-2 rounded bg-white text-zinc-500 w-max">

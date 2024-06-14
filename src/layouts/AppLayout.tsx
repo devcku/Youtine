@@ -1,13 +1,11 @@
-import { Outlet } from "react-router-dom";
 import {
-	FireIcon,
-	HomeIcon,
-	MagnifyingGlassIcon,
-	PlusIcon,
-	UserIcon,
+    FireIcon,
+    HomeIcon,
+    MagnifyingGlassIcon,
+    PlusIcon,
+    UserIcon,
 } from "@heroicons/react/20/solid";
-import Home from "../pages/Home";
-import { MagnifyingGlassCircleIcon } from "@heroicons/react/20/solid";
+import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
 	return (
@@ -33,17 +31,19 @@ const AppLayout = () => {
 					</li>
 				</ul>
 				<ul className="flex flex-col gap-4 p-6  text-zinc-500 font-semibold">
-					<li className="flex gap-4 p-2">
-						<div className="p-2 bg-white h-max rounded">
-							<UserIcon className="h-6" />
-						</div>
-						<div className="flex-col">
-							<h3 className="font-semibold">DanielTheCreator</h3>
-							<div className="flex text-xs items-center gap-0.5 text-orange-600">
-								<FireIcon className="h-4" /> 5 Days
+					{[1, 2, 3].map(() => (
+						<li className="flex gap-4 p-2">
+							<div className="p-2 bg-white h-max rounded">
+								<UserIcon className="h-6" />
 							</div>
-						</div>
-					</li>
+							<div className="flex-col">
+								<h3 className="font-semibold">DanielTheCreator</h3>
+								<div className="flex text-xs items-center gap-0.5 text-orange-600">
+									<FireIcon className="h-4" /> 5 Days
+								</div>
+							</div>
+						</li>
+					))}
 				</ul>
 			</nav>
 			<div className="col-span-3">
